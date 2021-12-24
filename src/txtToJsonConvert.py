@@ -1,7 +1,7 @@
 #Read a file from the current directory named envelopes-rewrite.txt and convert it to JSON
 from json import dumps
 
-file  = open('envelopes-rewrite.txt', 'r')
+file  = open('brandname-rewrite.txt', 'r')
 data = file.readlines()
 file.close()
 
