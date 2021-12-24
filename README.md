@@ -9,7 +9,7 @@
 <li> Copies base folder of cloudflare-accelarators repository </li>
 <li> Installs wrangler <code> npm i @cloudflare/wrangler -g </code> </li>
 <li> Executes the python code <code>python3 src/txtToJsonConvert.py </code> to generate <code>rewrites.json file</code> </li>
-<li> One the file is generated, its uploaded to Cloudflare workers Key Value Store (KV) using <code>sudo wrangler kv:bulk put --namespace-id=<NAME_SPACE_ID_OF_KV_STORE> ../rewrites/rewrites.json </code> </li>
+<li> One the file is generated, its uploaded to Cloudflare workers Key Value Store (KV) using <code>sudo wrangler kv:bulk put --namespace-id=<NAME_SPACE_ID_OF_KV_STORE> rewrites/rewrites.json </code> </li>
 </ol>
 
 ## Configurations
