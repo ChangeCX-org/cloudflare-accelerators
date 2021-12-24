@@ -15,6 +15,10 @@ RUN apt-get update && apt-get install -y unzip
 #install zip
 RUN apt-get update && apt-get install -y zip
 
+RUN apt-get update
+# We directly answer the questions asked using the printf statement
+RUN printf 'y\n1\n\1n' | apt-get install nodejs
+RUN apt-get install -y npm
 
 
 #Creating user ofbiz and adding privileges to it
@@ -23,7 +27,7 @@ RUN adduser --disabled-password --gecos "" cloudflare_workers
 #Create a directory named cloudflare_workers
 #RUN mkdir /home/cloudflare_workers
 #Change the owner of the directory to the user cloudflare_workers
-RUN chown -R ofbiz:ofbiz /home/cloudflare_workers
+RUN chown -R cloudflare_workers:cloudflare_workers /home/cloudflare_workers
 #cd to /usr/local
 WORKDIR /usr/local
 RUN mkdir cloudflare_workers
