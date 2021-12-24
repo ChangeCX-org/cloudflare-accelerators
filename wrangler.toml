@@ -1,0 +1,8 @@
+name = "rewrite-app"
+type = "javascript"
+
+account_id = "15fab8531e3ea3674dd56c192d118b09"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2021-12-22"
